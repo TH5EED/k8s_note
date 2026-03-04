@@ -17,10 +17,9 @@
 ![](assets/k8s/file-20260304185540908.png)
 
 分为master和node
-
-
-
-
+# Pod
+![](assets/k8s/file-20260304190017833.png)
+最小部署模块
 
 
 
