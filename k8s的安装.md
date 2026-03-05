@@ -8,5 +8,7 @@ kubeadm安装
 
 
 网卡两块：仅主机ens160，nat模式ens192
-因为calico，先关闭第二块网卡
+因为calico，先关闭第二块网卡：autoconnect=false关闭开机自启
+
+
 
