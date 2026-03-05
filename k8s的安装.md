@@ -17,4 +17,4 @@ kubeadm安装
 # 防火墙修改
 关闭且禁用firewalld，改用iptables
 
-
+# 禁用seliunx，设置时区，关闭swap分区
