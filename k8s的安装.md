@@ -14,6 +14,7 @@ kubeadm安装
 去/etc/yum.repos.d/中
 查看repo文件内容，grep过滤有没有国内镜像网站（aliyun.com)
 
-
+# 防火墙修改
+关闭且禁用firewalld，改用iptables
 
 
