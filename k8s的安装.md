@@ -22,6 +22,9 @@ kubeadm安装
 /etc/hosts
 # 安装ipvs，开启路由转发，加载网桥
 # 安装docker
-先从中科大镜像站下载官方yum源配置文件，结果是在/etc/yum.
-这个配置文件中的网址很慢，替换成国内镜像
+先从中科大镜像站下载官方yum源配置文件，结果是在/etc/yum.repos.d目录下生成docker-ce.repo文件
+
+这个配置文件中的网址很慢，需要替换成国内镜像
+
+然后就可以下载docker-ce
 
