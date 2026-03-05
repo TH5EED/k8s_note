@@ -19,8 +19,11 @@
 分为master和node两种节点
 kubelet监听api server和pod的变化，想要创建容器需要docker或者podman
 ![](assets/k8s安装的准备/file-20260305160358637.png)
+cri是容器运行时接口
+容器运行时有docker,podman,containerd,cri-o
+
 所以如果使用docker，要有一个cri转换ocri的工具：cri-docker
-cri接口又podman,containerd,erd
+
 # Pod
 ![](assets/k8s安装的准备/file-20260304190017833.png)
 pod是最小部署模块
