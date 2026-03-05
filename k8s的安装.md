@@ -11,7 +11,9 @@ kubeadm安装
 因为calico，先关闭第二块网卡：autoconnect=false关闭开机自启
 
 # 系统软件源
-查看repo文件内容 /etc/yum.repos.d/
+去/etc/yum.repos.d/中
+查看repo文件内容，grep过滤有没有国内镜像网站（aliyun.com)
+
 
 
 
