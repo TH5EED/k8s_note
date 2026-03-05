@@ -11,7 +11,7 @@
 
 云厂商给你提供一个设备齐全的房子。直接带着之前打包好的docker镜像，放在这个容器中即可
 
-# k8s微观架构
+# ==k8s微观架构==
 
 
 ![](assets/k8s安装的准备/file-20260304185540908.png)
@@ -22,9 +22,12 @@ kubelet监听api server和pod的变化，启停容器
 ![](assets/k8s安装的准备/file-20260305160358637.png)
 cri是容器运行时接口
 容器运行时有docker,podman,containerd,cri-o
-
 所以如果使用docker，要有一个cri转换ocri的工具：cri-docker
 
+==kubelet--->cri-docker--->dockerd--->containerd--->container==
+- containerd与docker两个运行时的区别在于：前者摒弃掉了cri-docker--->dockerd这一流程，负担更少
+- cri-o是专为k8s而生，完全独立与docker
+- podman旨在替代docker，与docker高度重合
 # Pod
 ![](assets/k8s安装的准备/file-20260304190017833.png)
 pod是最小部署模块
