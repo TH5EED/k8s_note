@@ -17,7 +17,8 @@
 ![](assets/k8s安装的准备/file-20260304185540908.png)
 
 分为master和node两种节点
-kubelet监听api server和pod的变化，想要创建容器需要docker或者podman
+kubelet监听api server和pod的变化，启停容器
+想要创建容器需要docker或者podman
 ![](assets/k8s安装的准备/file-20260305160358637.png)
 cri是容器运行时接口
 容器运行时有docker,podman,containerd,cri-o
