@@ -20,4 +20,4 @@ kubeadm安装
 # 禁用seliunx，设置时区，关闭swap分区
 # 主机名修改
 /etc/hosts
-# 安装ipvs，开启路由转发
+# 安装ipvs，开启路由转发，加载网桥
