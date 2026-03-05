@@ -22,4 +22,4 @@ kubeadm安装
 /etc/hosts
 # 安装ipvs，开启路由转发，加载网桥
 # 安装docker
-添加docker的yum源
+先从中科大镜像站下载官方yum源配置文件
