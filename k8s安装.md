@@ -28,7 +28,7 @@ cri是容器运行时接口
 
 所以如果使用docker，要有一个cri转换ocri的工具：cri-docker
 
-==kubelet--->cri-docker--->dockerd--->containerd--->container==
+==kubelet--->cri-docker--->dockerd--->containerd--->runc--->my-app-container==
 
 # Pod
 ![](assets/k8s安装/file-20260304190017833.png)
