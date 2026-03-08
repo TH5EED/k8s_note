@@ -1,4 +1,10 @@
 控制器用来==不断地==确保集群当前状态与期望状态（清单的spec部分）保持一致
 ![](assets/Pod控制器/file-20260308144423943.png)
 # RC和RS
-rc会创建期望数量的pod，并自动将其labels与自己的selector相同
+rc会创建期望数量的pod，并自动将其labels与自己的selector相同，前提是selector是模板中的labels的子集
+
+==注意：==
+当一个pod损坏（可能所处节点损坏）时，rc会重建一个pod来尽量满足期望
+当一个pod的容器损坏（进程被杀死）时，只要pod的重载策略是always，pod就会重建一个新容器并重启->RESTARTS字段加一（kubectl get pod -o wide可观察到）
+
+
