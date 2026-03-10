@@ -12,13 +12,13 @@ kube-proxy是一个网络代理组件
 	==service定义：虚拟IP，端口，协议==
 	==endpoints：后端pod的IP，端口==
 ==随后将这些信息转化为规则==
-## iptables
+## iptables工作模式
 ![](assets/Service/file-20260310222529174.png)
 不同于userspace，==kube-proxy的工作只监听apiserver，将service变化修改本地的iptables规则。==不再代理当前节点pod的用户请求
 
 优点：相对于userspace，kube-proxy的功能解耦，压力减小
 
-## ipvs
+## ipvs工作模式
 同上模式，规则变为ipvs规则，四层性能更强，但很多云厂商阉割这个模块
 
 
