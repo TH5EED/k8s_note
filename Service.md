@@ -43,7 +43,9 @@ ipvsadm -Ln
 ![](assets/Service/file-20260310234039544.png)
 
 ## NodePort
-
+绑定物理网卡的一个端口，==供外部访问==
+用到了多个负载均衡 4层-7层-4层
+![](assets/Service/file-20260310234617485.png)
 
 ## LoadBalancer
 
