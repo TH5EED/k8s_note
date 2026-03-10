@@ -26,3 +26,12 @@ kubectl edit configmap kube-proxy -n kube-system
 # -n namespace名字空间，需要指明
 ```
 
+```bash
+kubectl delete pod -n kube-system -l k8s-app=kube-proxy
+# 修改模式后需要将原来资源删除
+```
+
+```bash
+ipvsadm -Ln
+# 查看负载均衡，可以看到svc和pod的IP地址
+```
