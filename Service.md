@@ -21,23 +21,10 @@ kube-proxy是一个网络代理组件
 ## ipvs工作模式
 同上模式，规则变为ipvs规则，四层性能更强，但很多云厂商阉割这个模块
 
+### 修改kube-proxy模式
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```bash
+kubectl edit configmap kube-proxy -n kube-system
+# -n namespace名字空间，需要指明不然默认default
+```
 
