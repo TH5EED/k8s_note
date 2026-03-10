@@ -39,3 +39,13 @@ ipvsadm -Ln
 
 # 工作模式
 ## ClusterIP
+默认类型，自动分配一个仅cluster内部可以访问的VIP
+![](assets/Service/file-20260310234039544.png)
+
+## NodePort
+
+
+## LoadBalancer
+
+
+## ExternalName
