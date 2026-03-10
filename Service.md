@@ -28,7 +28,7 @@ kubectl edit configmap kube-proxy -n kube-system
 
 ```bash
 kubectl delete pod -n kube-system -l k8s-app=kube-proxy
-# 修改模式后需要将原来资源删除，让ds自动重建
+# 修改模式后需要将原来资源删除，自动重建
 # 之所以带名字空间，匹配k8s-app，是因为并不是删除集群所有pod，kube-proxy只是组件之一，只是为了更新设置，所以重启它的名字空间下的对应标签之下的pod资源即可
 ```
 
@@ -38,3 +38,4 @@ ipvsadm -Ln
 ```
 
 # 工作模式
+## ClusterIP
