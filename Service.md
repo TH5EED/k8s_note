@@ -154,3 +154,19 @@ $ docker run -itd -p 80:80 --net host wangyanglinux/myapp:v1
 # ？
 当访问svc时需要虚拟端口6666，ep上记录的80是该节点上的服务真实在监听的端口，那svc上的targetPort有什么作用
 
+# 题目
+1. Service 的作用是什么？
+构成负载均衡保证服务稳定性，提供对外访问的
+2. Service 如何实现服务发现的？
+
+3. 为什么 Pod 不能直接对外提供服务？
+
+4. Service 的类型有哪些？以及默认的 Service 类型是什么？
+
+5. Service 默认的类型，能够实现什么样的访问？
+
+6. Service 和 kube-proxy 的关系是什么？
+
+7. Deployment 和 ReplicaSet 是什么关系？它们之间有什么区别？
+
+8. Service 的 NodePort 类型，能够实现什么样的访问？
