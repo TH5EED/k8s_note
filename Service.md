@@ -49,6 +49,8 @@ ipvsadm -Ln
 
 ## LoadBalancer
 多层套娃解决单点故障问题
-![](assets/Service/file-20260311093939632.png)
+比如nodeport模式中，外部用户可以通过负载均衡去访问合适的节点，而不是自己选
+![](assets/Service/file-20260311094238115.png)
 
 ## ExternalName
+将集群外部服务引入到集群内部，没有任何类型代理被创建，高版本支持
