@@ -89,7 +89,10 @@ kubectl create svc nodeport <svc-name> --tcp=<cli-node>:<ser-node> --node-port=<
 ## ExternalName
 将集群外部服务引入到集群内部，没有任何类型代理（ipvs，iptables）被创建，基于DNS别名机制，高版本1.7+支持
 ![](assets/Service/file-20260311094935153.png)
-
+ ![](assets/Service/file-20260311185126399.png)
+ 当访问该svc的域名时，会将其指向spec.externalName的域名
+ ==只能在集群内部使用，因为用到了core-dns，外部不会接触这个插件==
+ 
 # 持久化连接
 不同于负载均衡，始终会被定向到同一个节点
 场景：购物车未登录态：token只存储在一个节点，需要持久化连接节省资源，提高用户体验
@@ -103,3 +106,5 @@ ipvsadm -A -t <svc-VIP>:<Port> -s rr -p 120
 ```YAML
 service.spec.sessionAffinity=ClientIP
 ```
+
+# Endpoints
