@@ -173,5 +173,7 @@ IP访问，域名访问
 kube-proxy将来自svc的流量经过ipvs，利用ipvs的规则将流量转发至对应的pod
 
 7. Deployment 和 ReplicaSet 是什么关系？它们之间有什么区别？
-rs内置于deployment，创建deployment会自动创建一个同名同名字空间的rs
+rs内置于deployment，创建deployment会自动创建一个同名同名字空间的rs，deployment多了声明式创建方式，也支持回滚更新
+
 8. Service 的 NodePort 类型，能够实现什么样的访问？
+在物理网卡上绑定了一个端口，可供外部访问进k8s集群
