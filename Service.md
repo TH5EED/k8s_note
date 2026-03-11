@@ -156,12 +156,15 @@ $ docker run -itd -p 80:80 --net host wangyanglinux/myapp:v1
 
 # 题目
 1. Service 的作用是什么？
-构成负载均衡保证服务稳定性，提供对外访问的
+构成负载均衡保证服务稳定性，提供对外访问的方式
+
 2. Service 如何实现服务发现的？
 
 3. 为什么 Pod 不能直接对外提供服务？
+pod的IP是虚拟IP
 
 4. Service 的类型有哪些？以及默认的 Service 类型是什么？
+clusterip默认,nodeport,externalname,loadbalancer
 
 5. Service 默认的类型，能够实现什么样的访问？
 
