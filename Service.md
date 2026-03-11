@@ -108,3 +108,13 @@ service.spec.sessionAffinity=ClientIP
 ```
 
 # Endpoints
+svc和pod的中间关联
+一组实际服务的端点集合
+
+- 有标签选择器
+自动创建同名的endpoins资源
+匹配当前名字空间的pod
+
+- 无标签选择器
+需管理员手动创建
+匹配管理员填写的端点信息：==只要是svc能够触及到的地址均可，十分灵活==
