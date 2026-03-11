@@ -46,6 +46,12 @@ ipvsadm -Ln
 ![](assets/Service/file-20260310234039544.png)
 如果没有svc，想要实现负载均衡需要在nginx内部定死三个tomcat的IP，无法解决pod重建IP更换，扩缩容的问题
 
+```bash
+kubectl create svc clusterip <svc-name> --tcp=<cli-node>:<ser-node>
+# 冒号前端口是svc对外暴露给客户端的端口（nginx）
+# 冒号后端口是想要隐藏的真实服务器的端口（tomcat）
+# 通过create创建是直接被apiserver转为json格式去创建，不指明会默认匹配标签等于svc名字
+```
 
 ## NodePort
 为svc在每台机器上绑定物理网卡的一个端口，==供外部通过<NodeIP/>:<NodePort/>访问==
