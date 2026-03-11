@@ -170,7 +170,7 @@ clusterip默认,nodeport,externalname,loadbalancer
 IP访问，域名访问
 
 6. Service 和 kube-proxy 的关系是什么？
-kube-proxy监听apiserver的信息将来自svc的流量经过ipvs，利用ipvs的规则将流量转发至对应的pod
+kube-proxy监听apiserver获得负载均衡的信息，将其转为ipvs规则，流量转发至对应的pod
 
 7. Deployment 和 ReplicaSet 是什么关系？它们之间有什么区别？
 rs内置于deployment，创建deployment会自动创建一个同名同名字空间的rs，deployment多了声明式创建方式，也支持回滚更新
