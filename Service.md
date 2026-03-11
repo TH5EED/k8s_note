@@ -76,7 +76,7 @@ dig -t A <service-name>.<namespace>.svc.cluster.local. @<dns插件负载均衡�
 ![](assets/Service/file-20260311170703990.png)
 
 ```bash
-kubectl create svc clusterip <svc-name> --tcp=<cli-node>:<ser-node> --node-port=<node-port>
+kubectl create svc nodeport <svc-name> --tcp=<cli-node>:<ser-node> --node-port=<node-port>
 # --node-port是暴露给外部的接口
 ```
 ## LoadBalancer
