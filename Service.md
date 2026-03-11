@@ -159,10 +159,14 @@ $ docker run -itd -p 80:80 --net host wangyanglinux/myapp:v1
 构成负载均衡保证服务稳定性，提供对外访问的方式
 
 2. Service 如何实现服务发现的？
-
+DNS 方式（主流  
+    CoreDNS 为每个 Service 自动生成 DNS 记录：  
+    `<svc-name>.<namespace>.svc.cluster.local → ClusterIP`
 
 3. 为什么 Pod 不能直接对外提供服务？
-pod的IP是虚拟IP
+~~pod的IP是虚拟IP
+
+网络隔离，pod重建后IP会变
 
 4. Service 的类型有哪些？以及默认的 Service 类型是什么？
 clusterip默认,nodeport,externalname,loadbalancer
