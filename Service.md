@@ -39,8 +39,9 @@ ipvsadm -Ln
 
 # 工作模式
 ## ClusterIP
-默认类型，自动分配一个仅cluster内部可以访问的VIP
+默认类型，自动分配一个仅cluster内部可以访问的VIP，可以屏蔽pod的动态变化
 ![](assets/Service/file-20260310234039544.png)
+如果没有svc，想要实现负载均衡需要在nginx内部定死三个tomcat的IP，无法解决pod重建IP更换，扩缩容的问题
 
 ## NodePort
 绑定物理网卡的一个端口，==供外部访问==
