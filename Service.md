@@ -9,9 +9,12 @@ kube-proxy是一个网络代理组件
 默认代理为iptables（防火墙)，新版本增加了ipvs代理，这是kube-proxy的两种工作模式，决定了如何实现流量转发（通过不同规则）
 
 ==监听apiserver：获取当前负载均衡的信息==
-	==service定义：虚拟IP，端口，协议==
-	==endpoints：后端pod的IP，端口==
-==随后将这些信息转化为规则==
+	service定义：虚拟IP，端口，协议
+	endpoints：后端pod的IP，端口
+随后将这些信息转化为规则
+
+==组件协同==
+![](assets/Service/file-20260311095144203.png)
 ## iptables
 ![](assets/Service/file-20260310222529174.png)
 不同于userspace，==kube-proxy的工作只监听apiserver，将service变化修改本地的iptables规则。==不再代理当前节点pod的用户请求
