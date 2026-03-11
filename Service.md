@@ -119,3 +119,38 @@ svc和pod的中间关联
 需管理员手动创建
 匹配管理员填写的端口信息：==只要是svc能够触及到的地址均可，十分灵活==
 可以是节点内服务，可以是集群外部服务，可以是虚拟IP
+
+```YAML
+apiVersion: v1 
+kind: Service 
+metadata: 
+  name: nginx-noselectt 
+spec: 
+  ports:   
+    - protocol: TCP     
+      port: 6666     
+      targetPort: 80 
+# 创建svc，没有标签选择器   
+   
+--- 
+
+apiVersion: v1 
+kind: Endpoints 
+metadata: 
+  name: nginx-noselectt 
+subsets: 
+  - addresses:     
+      - ip: 192.168.66.12   
+    ports:     
+      - port: 80       
+     
+# 手动创建ep，注意name和namespace要和svc一致才会关联
+```
+
+```bash  
+$ docker run -itd -p 80:80 --net host wangyanglinux/myapp:v1
+# 如果不在上面节点上开启一个服务（无论是非容器还是容器服务），访问svc会报错
+```
+# ？
+当访问svc时需要虚拟端口6666，ep上记录的80是该节点上的服务真实在监听的端口，那svc上的targetPort有什么作用
+
