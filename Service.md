@@ -167,8 +167,10 @@ pod的IP是虚拟IP
 clusterip默认,nodeport,externalname,loadbalancer
 
 5. Service 默认的类型，能够实现什么样的访问？
+IP访问，域名访问
 
 6. Service 和 kube-proxy 的关系是什么？
+kube-proxy将来自svc的流量经过ipvs，利用ipvs的规则将流量转发至对应的pod
 
 7. Deployment 和 ReplicaSet 是什么关系？它们之间有什么区别？
 
