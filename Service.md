@@ -48,6 +48,7 @@ ipvsadm -Ln
 ![](assets/Service/file-20260310234617485.png)
 
 ## LoadBalancer
-
+多层套娃解决单点故障问题
+![](assets/Service/file-20260311093939632.png)
 
 ## ExternalName
