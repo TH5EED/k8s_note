@@ -11,7 +11,7 @@ kube-proxy是一个网络代理组件
 ==监听apiserver：获取当前负载均衡的信息==
 	service定义：虚拟IP，端口，协议
 	endpoints：后端pod的IP，端口
-随后将这些信息转化为规则
+随后将这些信息转化为ipvs规则
 
 ==组件协同==
 ![](assets/Service/file-20260311095144203.png)
