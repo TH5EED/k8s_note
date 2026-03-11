@@ -87,7 +87,7 @@ kubectl create svc nodeport <svc-name> --tcp=<cli-node>:<ser-node> --node-port=<
 
 
 ## ExternalName
-将集群外部服务引入到集群内部，没有任何类型代理被创建，基于DNS别名机制，高版本1.7+支持
+将集群外部服务引入到集群内部，没有任何类型代理（ipvs，iptables）被创建，基于DNS别名机制，高版本1.7+支持
 ![](assets/Service/file-20260311094935153.png)
 
 # 持久化连接
