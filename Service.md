@@ -46,6 +46,7 @@ ipvsadm -Ln
 ![](assets/Service/file-20260310234039544.png)
 如果没有svc，想要实现负载均衡需要在nginx内部定死三个tomcat的IP，无法解决pod重建IP更换，扩缩容的问题
 
+
 ## NodePort
 为svc在每台机器上绑定物理网卡的一个端口，==供外部通过<NodeIP/>:<NodePort/>访问==
 ![](assets/Service/file-20260310234617485.png)
