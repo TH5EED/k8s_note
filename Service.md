@@ -52,6 +52,9 @@ kubectl create svc clusterip <svc-name> --tcp=<cli-node>:<ser-node>
 # 冒号后端口是想要隐藏的真实服务器的端口（tomcat）
 # 通过create创建是直接被apiserver转为json格式去创建，不指明会默认匹配标签等于svc名字
 ```
+### 访问svc方式
+除了kubectl get svc查看IP进行访问，还可以借助dns插件
+
 
 ## NodePort
 为svc在每台机器上绑定物理网卡的一个端口，==供外部通过<NodeIP/>:<NodePort/>访问==
