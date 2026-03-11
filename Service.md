@@ -53,4 +53,5 @@ ipvsadm -Ln
 ![](assets/Service/file-20260311094238115.png)
 
 ## ExternalName
-将集群外部服务引入到集群内部，没有任何类型代理被创建，高版本支持
+将集群外部服务引入到集群内部，没有任何类型代理被创建，基于DNS别名机制，高版本1.7+支持
+![](assets/Service/file-20260311094935153.png)
