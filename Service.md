@@ -8,7 +8,7 @@ kube-proxy是一个网络代理组件
 
 默认代理为iptables（防火墙)，新版本增加了ipvs代理，这是kube-proxy的两种工作模式，决定了如何实现流量转发（通过不同规则）
 
-==监听apiserver：获取当前负载均衡的信息==
+==kube-proxy监听apiserver：获取当前负载均衡的信息==
 	service定义：虚拟IP，端口，协议
 	endpoints：后端pod的IP，端口
 随后将这些信息转化为ipvs规则
@@ -159,7 +159,7 @@ $ docker run -itd -p 80:80 --net host wangyanglinux/myapp:v1
 构成负载均衡保证服务稳定性，提供对外访问的方式
 
 2. Service 如何实现服务发现的？
-
+apiserver监听
 3. 为什么 Pod 不能直接对外提供服务？
 pod的IP是虚拟IP
 
@@ -170,7 +170,7 @@ clusterip默认,nodeport,externalname,loadbalancer
 IP访问，域名访问
 
 6. Service 和 kube-proxy 的关系是什么？
-kube-proxy将来自svc的流量经过ipvs，利用ipvs的规则将流量转发至对应的pod
+kube-proxy监听apiserver的信息将来自svc的流量经过ipvs，利用ipvs的规则将流量转发至对应的pod
 
 7. Deployment 和 ReplicaSet 是什么关系？它们之间有什么区别？
 rs内置于deployment，创建deployment会自动创建一个同名同名字空间的rs，deployment多了声明式创建方式，也支持回滚更新
