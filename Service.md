@@ -55,6 +55,7 @@ kubectl create svc clusterip <svc-name> --tcp=<cli-node>:<ser-node>
 ### 访问svc方式
 除了kubectl get svc查看IP进行访问，还可以借助dns插件
 每个svc被创建后，会有一个dns的域名，在插件中被解析，结果就是这个svc的IP
+==前者通过IP，后者通过域名==<service-name/>.<namespace/>.svc.cluster.local
 
 ## NodePort
 为svc在每台机器上绑定物理网卡的一个端口，==供外部通过<NodeIP/>:<NodePort/>访问==
