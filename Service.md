@@ -57,7 +57,7 @@ kubectl create svc clusterip <svc-name> --tcp=<cli-node>:<ser-node>
 每个svc被创建后，会有一个dns的域名，在插件中被解析，结果就是这个svc的IP
 
 pod中会有两个core-DNS插件，其IP并不需要知道，因为已经被负载均衡
-只需要找到负载均衡集群的IP即可，可通过ipvsadm -Ln查找（具有tcp和udp的那个）
+只需要找到负载均衡集群的IP即可，可通过ipvsadm -Ln查找（具有tcp和udp的那个），也可以通过他所在的名字空间去kubectl get svc -m
 ```bash
 dig -t A <service-name>.<namespace>.svc.cluster.local. @<dns插件负载均衡集群IP>
 # cluster.local. 默认域名
