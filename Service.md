@@ -159,14 +159,14 @@ $ docker run -itd -p 80:80 --net host wangyanglinux/myapp:v1
 构成负载均衡保证服务稳定性，提供对外访问的方式
 
 2. Service 如何实现服务发现的？
-DNS 方式（主流  
+DNS 方式
     CoreDNS 为每个 Service 自动生成 DNS 记录：  
     `<svc-name>.<namespace>.svc.cluster.local → ClusterIP`
 
 3. 为什么 Pod 不能直接对外提供服务？
 ~~pod的IP是虚拟IP
 
-网络隔离，pod重建后IP会变
+pod重建后IP会变
 
 4. Service 的类型有哪些？以及默认的 Service 类型是什么？
 clusterip默认,nodeport,externalname,loadbalancer
@@ -175,7 +175,7 @@ clusterip默认,nodeport,externalname,loadbalancer
 IP访问，域名访问
 
 6. Service 和 kube-proxy 的关系是什么？
-kube-proxy监听apiserver获得存储在etcd中的负载均衡的信息，将其转为ipvs规则，将流量转发至对应的pod
+kube-proxy监听apiserver获得存储在etcd中的负载均衡的信息，将其转为ipvs规则，将流量nat模式转发至对应的后端pod
 
 7. Deployment 和 ReplicaSet 是什么关系？它们之间有什么区别？
 rs内置于deployment，创建deployment会自动创建一个同名同名字空间的rs，deployment多了声明式创建方式，也支持回滚更新
