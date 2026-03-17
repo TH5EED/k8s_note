@@ -100,6 +100,7 @@ kubectl create svc nodeport <svc-name> --tcp=<cli-node>:<ser-node> --node-port=<
 - 底层网络规则方式
 ```bash
 ipvsadm -A -t <svc-VIP>:<Port> -s rr -p 120
+# svcIP 端口 轮询 持久化连接秒数
 ```
 
 - 利用k8s的api声明
