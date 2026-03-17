@@ -101,6 +101,7 @@ kubectl create svc nodeport <svc-name> --tcp=<cli-node>:<ser-node> --node-port=<
 ```bash
 ipvsadm -A -t <svc-VIP>:<Port> -s rr -p 120
 # svcIP 端口 轮询 持久化连接秒数
+# 来自<svc-VIP>的请求，未来120秒全部转发到同一个pod上
 ```
 
 - 利用k8s的api声明
