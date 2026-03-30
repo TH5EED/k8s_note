@@ -40,3 +40,7 @@ GitHub找对应版本
 ==helm是k8s的包管理工具，相当于linux的yum/apt-get命令==
 go语言编写
 GitHub下载
+
+
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115876892248081&bvid=BV1CW6oBeETn&cid=35324890748&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
