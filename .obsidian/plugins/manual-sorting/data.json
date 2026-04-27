@@ -2,26 +2,26 @@
   "customOrder": {
     "/": {
       "children": [
+        "assets",
+        "云原生.md",
+        "容器与镜像.md",
+        "k8s安装.md",
+        "资源清单.md",
+        "控制器.md",
+        "Service.md",
         "存储.md",
         "调度器.md",
-        "控制器.md",
-        "容器与镜像.md",
-        "网络工作原理与Helm入门.md",
-        "云原生.md",
-        "资源清单.md",
-        "k8s安装.md",
-        "Service.md",
-        "assets"
+        "网络工作原理与Helm入门.md"
       ],
       "sortOrder": "custom"
     },
     "assets": {
       "children": [
+        "assets/云原生",
         "assets/存储",
         "assets/调度器",
         "assets/控制器",
         "assets/网络工作原理与Helm入门",
-        "assets/云原生",
         "assets/资源清单",
         "assets/k8s安装",
         "assets/Service"
