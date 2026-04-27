@@ -1,0 +1,97 @@
+{
+  "customOrder": {
+    "/": {
+      "children": [
+        "存储.md",
+        "调度器.md",
+        "控制器.md",
+        "容器与镜像.md",
+        "网络工作原理与Helm入门.md",
+        "云原生.md",
+        "资源清单.md",
+        "k8s安装.md",
+        "Service.md",
+        "assets"
+      ],
+      "sortOrder": "custom"
+    },
+    "assets": {
+      "children": [
+        "assets/存储",
+        "assets/调度器",
+        "assets/控制器",
+        "assets/网络工作原理与Helm入门",
+        "assets/云原生",
+        "assets/资源清单",
+        "assets/k8s安装",
+        "assets/Service"
+      ],
+      "sortOrder": "custom"
+    },
+    "assets/存储": {
+      "children": [
+        "assets/存储/file-20260316164055519.png",
+        "assets/存储/file-20260316194838088.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "assets/调度器": {
+      "children": [
+        "assets/调度器/file-20260316232222841.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "assets/控制器": {
+      "children": [
+        "assets/控制器/file-20260308144423943.png",
+        "assets/控制器/file-20260309194412753.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "assets/网络工作原理与Helm入门": {
+      "children": [
+        "assets/网络工作原理与Helm入门/file-20260330103923159.png",
+        "assets/网络工作原理与Helm入门/file-20260330103946536.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "assets/云原生": {
+      "children": [
+        "assets/云原生/file-20260413163933961.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "assets/资源清单": {
+      "children": [
+        "assets/资源清单/file-20260307205138774.png",
+        "assets/资源清单/file-20260307211040006.png",
+        "assets/资源清单/file-20260317133515556.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "assets/k8s安装": {
+      "children": [
+        "assets/k8s安装/file-20260304183905581.png",
+        "assets/k8s安装/file-20260304185540908.png",
+        "assets/k8s安装/file-20260304190017833.png",
+        "assets/k8s安装/file-20260305160358637.png"
+      ],
+      "sortOrder": "custom"
+    },
+    "assets/Service": {
+      "children": [
+        "assets/Service/file-20260310222529174.png",
+        "assets/Service/file-20260310234039544.png",
+        "assets/Service/file-20260311094935153.png",
+        "assets/Service/file-20260311095144203.png",
+        "assets/Service/file-20260311170703990.png",
+        "assets/Service/file-20260311183916990.png",
+        "assets/Service/file-20260311185126399.png"
+      ],
+      "sortOrder": "custom"
+    }
+  },
+  "sortOrder": "custom",
+  "debugMode": false,
+  "newItemPlacement": "top"
+}
